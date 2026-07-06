@@ -324,7 +324,7 @@ function parsePGNs(text) {
     .filter(Boolean);
   return blocks.map((block) => {
     const headers = {};
-    const re = /\[(\w+)\s+"([^"]*)"]/ g;
+    const re = /\[(\w+)\s+"([^"]*)"]/g;
     let m;
     while ((m = re.exec(block)) !== null) headers[m[1]] = m[2];
     return {
